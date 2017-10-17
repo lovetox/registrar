@@ -635,6 +635,29 @@
       <value>whitelist</value>
     </option>
   </field>
+  <field var='pubsub#persist_items'
+         type='boolean'
+         label='Precondition: Whether to persist items to storage'/>
+  <field var='pubsub#send_last_published_item'
+         type='list-single'
+         label='Precondition: When to send the last published item'>
+    <option label='Never'>
+      <value>never</value>
+    </option>
+    <option label='When a new subscription is processed'>
+      <value>on_sub</value>
+    </option>
+    <option label='When a new subscription is processed and whenever a subscriber comes online'>
+      <value>on_sub_and_presence</value>
+    </option>
+  </field>
+  <field var='pubsub#roster_groups_allowed'
+         type='list-multi'
+         label='Override: The roster group(s) allowed to subscribe and retrieve items'/>
+  <field var='pubsub#max_items'
+         type='text-single'
+         label='Precondition: Max # of items to persist'/>
+  </field>
 </form_type>
 <!-- end FORM_TYPEs for Publish-Subscribe (XEP-0060) -->
 <!-- begin FORM_TYPEs for Remote Controlling Clients (XEP-0145) -->
